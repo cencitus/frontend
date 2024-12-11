@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script type = "text/JavaScript" src = "modal.js"> </script>
+    <title>Добро пожаловать на мой сайт</title>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <img src="Logo.webp" width="75" alt="trollface">   
+                <p style="margin-top:10px">Логотип</p>
+            </div>
+            <div class="user-info">
+                <p>Группа ЭФБО-02-23</p>
+                <p>Калиничева Варвара Максимовна</p>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="main.html">Главная</a></li>
+                <li><a href="firstsemester.html">Первый семестр</a></li>
+                <li><a href="secondsemester.html">Второй семестр</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="#">Авторизация</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <ul class="side-menu">
+                <li><a href="#">Навигация по странице</a></li>
+                <li><a href="#">Фронтенд</a></li>
+                <li><a href="#">Бэкенд</a></li>
+            </ul>
+        </aside>
+        <section class="content">
+            <h1>Разработка веб-приложений</h1> 
+            <div class="JPG grid-container">
+                <div class="jpg-item">
+                    <img src="cat.jpg" alt="cat">
+                    <figcaption>Сайт-Визитка</figcaption>
+                    <button class="open-modal" data-service="сайта-визитки">Обратная связь</button>
+                </div>
+                <div class="jpg-item">
+                    <img src="dog.jpg" alt="dog">
+                    <figcaption>Корпоративный сайт</figcaption>
+                    <button class="open-modal" data-service="корпоративного сайта">Обратная связь</button>
+                </div>
+                <div class="jpg-item">
+                    <img src="karas.jpg" alt="ooo">
+                    <figcaption>Интернет магазин</figcaption>
+                    <button class="open-modal" data-service="интернет магазина">Обратная связь</button>
+                </div>
+                <div class="jpg-item">
+                    <img src="ooo.jpg" alt="ooo">
+                    <figcaption>Что-то там еще</figcaption>
+                    <button class="open-modal" data-service="интернет магазина">Обратная связь</button>
+                </div>
+                <div class="jpg-item">
+                    <img src="ooo.jpg" alt="ooo">
+                    <figcaption>Что-то там еще</figcaption>
+                    <button class="open-modal" data-service="интернет магазина">Обратная связь</button>
+                </div>
+                <div class="jpg-item">
+                    <img src="ooo.jpg" alt="ooo">
+                    <figcaption>Что-то там еще</figcaption>
+                    <button class="open-modal" data-service="интернет магазина">Обратная связь</button>
+                </div>
+                <div class="jpg-item">
+                    <img src="ooo.jpg" alt="ooo">
+                    <figcaption>Что-то там еще</figcaption>
+                    <button class="open-modal" data-service="интернет магазина">Обратная связь</button>
+                </div>
+                <div class="jpg-item">
+                    <img src="ooo.jpg" alt="ooo">
+                    <figcaption>Что-то там еще</figcaption>
+                    <button class="open-modal" data-service="интернет магазина">Обратная связь</button>
+                </div>
+            </div>
+            
+            
+        </section>
+            
+
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 id="modal-title">Разработка веб-приложений</h2>
+                    <p>Заполните форму, и мы обязательно свяжемся с вами для уточнения деталей</p>
+                    <form id="feedback-form">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" name="name" required>
+                        <br>
+                    
+                        <label for="surname">Фамилия</label>
+                        <input type="text" id="surname" name="surname" required>
+                        <br>
+                    
+                        <label for="email">Ваш e-mail</label>
+                        <input type="email" id="email" name="email" required>
+                        <br>
+                    
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" required>
+                        <br>
+                        <small>Введите 11 цифр без пробелов</small>
+                        <br>
+                    
+                        <label for="country">Страна</label>
+                        <select id="country" name="country" required>
+                            <option value="">--Выберите страну--</option>
+                            <option value="Россия">Россия</option>
+                            <option value="США">США</option>
+                            <option value="Китай">Китай</option>
+                            <br>
+                        </select>
+                        <br>
+                    
+                        <label for="date">Дата</label>
+                        <input type="date" id="date" name="date" required>
+                        <br>
+                    
+                        <label for="comment">Комментарий</label>
+                        <textarea id="comment" name="comment"></textarea>
+                        <br>
+                    
+                        <label>
+                            <input type="checkbox" id="consent" name="consent" required>
+                            Согласен на обработку моих персональных данных
+                        </label>
+                        <br>
+                    
+                        <button type="submit">Отправить</button>
+                    </form>
+                    
+                </div>
+            </div>
+    </main>
+    <footer>
+        <p>&copy; Калиничева Варвара Максимовна, 2024</p>
+        <div class="social icon">
+            <a href="https://vk.com/beerwithfriend">
+                <img src="vk.webp" width="50" alt="VK logo">
+            </a>
+        </div>
+    </footer>
+    <button id="scrollToTop" onclick="scrollToTop()">Наверх</button>
+
+    <script>
+        window.onscroll = function() {
+            const scrollButton = document.getElementById("scrollToTop");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollButton.style.display = "block";
+            } else {
+                scrollButton.style.display = "none";
+            }
+        };
+    
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Добро пожаловать на мой сайт</title>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <img src="Logo.webp" width="75" alt="trollface">   
+                <p style="margin-top:10px">Логотип</p>
+            </div>
+            <div class="user-info">
+                <p>Группа ЭФБО-02-23</p>
+                <p>Калиничева Варвара Максимовна</p>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="main.html">Главная</a></li>
+                <li><a href="firstsemester.html">Первый семестр</a></li>
+                <li><a href="secondsemester.html">Второй семестр</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="#">Авторизация</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <ul class="side-menu">
+                <li><a href="#">Навигация по странице</a></li>
+                <li><a href="#">Фронтенд</a></li>
+                <li><a href="#">Бэкенд</a></li>
+            </ul>
+        </aside>
+        <section class="content">
+            <h1 id="header">Добро пожаловать на мой сайт</h1>
+            <div class="intro">
+                <p>Меня зовут Калиничева Варвара Максимовна и я начинающий специалист по веб-разработке.</p>
+                <img src="Logo.jpg" alt="Собака в шляпе" class="myphoto">
+            </div>
+            <section class="section">
+                <h2 id="header2">Фронтенд</h2>
+            
+                <p id="text">Фронтенд (или клиентская часть)&nbsp;&mdash; это&nbsp;то, что видит пользователь. Он&nbsp;включает в&nbsp;себя все визуальные элементы веб-сайта или приложения: кнопки, формы, изображения и&nbsp;текст. Фронтенд разработчики используют языки разметки и&nbsp;стилизации, такие как HTML, CSS и&nbsp;JavaScript, чтобы создавать интерактивные и&nbsp;привлекательные интерфейсы. Основная задача фронтенда&nbsp;&mdash; обеспечить удобство использования и&nbsp;эстетическую привлекательность.</p>                        <div class="video"> 
+                    
+                    <div class="video-container">
+                        <video controls loop muted>
+                            <source src="mushroom.mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    </div>
+                    
+                    
+            </section>
+            
+            <section class="section">
+                <h2 id="header">Бэкенд</h2>
+                <p id="intro-paragraph">Бэкенд (или серверная часть)&nbsp;&mdash; это &laquo;за&nbsp;кулисами&raquo; веб-приложения. Он&nbsp;отвечает за&nbsp;обработку данных, управление пользователями и&nbsp;взаимодействие с&nbsp;базами данных. Бэкенд разработчики используют языки программирования, такие как Python, Ruby, Java или PHP, а&nbsp;также фреймворки и&nbsp;базы данных для создания логики приложения. Основная задача бэкенда&nbsp;&mdash; обеспечить стабильную работу приложения и&nbsp;безопасность данных.</p>                        <div class="video"> 
+                    <div class="video-container">
+                    <video controls loop muted>
+                        <source src="misha.mp4"> 
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                </div>
+            </section>
+    </main>
+    <footer>
+        <p>&copy; Калиничева Варвара Максимовна, 2024</p>
+        <div class="social icon">
+            <a href="https://vk.com/beerwithfriend">
+                <img src="vk.webp" width="50" alt="VK logo">
+            </a>
+        </div>
+    </footer>
+    <button id="scrollToTop" onclick="scrollToTop()">Наверх</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const studentPhoto = document.querySelector(".myphoto");
+            if (studentPhoto) {
+                studentPhoto.addEventListener("mouseover", function () {
+                    this.style.transform = "scale(1.2) rotate(360deg)";
+                    this.style.transition = "transform 0.3s ease";
+                });
+                studentPhoto.addEventListener("mouseout", function () {
+                    this.style.transform = "scale(1)";
+                });
+                studentPhoto.addEventListener("click", function () {
+                    this.src = "Teacher.jpg";
+                    this.alt = "Фотография любимого преподавателя";
+                });
+                studentPhoto.addEventListener("dblclick", function () {
+                    alert("хаааа");
+                });
+            }
+
+
+            const header = document.querySelector("h2");
+            if (header) {
+    header.addEventListener("mouseover", function () {
+        this.style.transformOrigin = "center"; 
+        this.style.transform = "scale(1.2)"; 
+        this.style.transition = "transform 0.3s ease-in-out"; 
+    });
+
+    header.addEventListener("mouseout", function () {
+        this.style.transform = "scale(1)"; 
+    });
+            }
+
+
+            const paragraph = document.getElementById("intro-paragraph");
+            if (paragraph) {
+                paragraph.addEventListener("click", function () {
+                    this.style.backgroundColor = this.style.backgroundColor === "lightblue" ? "lightcoral" : "lightblue";
+                });
+            }
+
+            const scrollButton = document.getElementById("scrollToTop");
+            if (scrollButton) {
+                window.onscroll = function () {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        scrollButton.style.display = "block";
+                    } else {
+                        scrollButton.style.display = "none";
+                    }
+                };
+                scrollButton.addEventListener("click", function () {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                });
+            }
+        });
+    </script>
+    
+</body>
+</html>

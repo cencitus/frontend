@@ -1,0 +1,581 @@
+:root {
+    --primary-color: #3498db; /* Основной цвет */
+    --secondary-color: #9fafa5; /* Вторичный цвет */
+    --text-color: #223349; /* Цвет текста */
+    --background-color: #becbb2; /* Цвет фона */
+    --details-color: #50404b; /* Цвет фона навигации */
+    --background-image: url("fon.jpg"); /* Добавьте путь к вашему изображению */
+}
+.nav-links a:hover  {
+    color: var(--details-color);
+    font-weight: 700; /* Делаем текст жирным */
+    transform: scale(1.2); /* Добавляем лёгкое увеличение */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Andale Mono', monospace;
+}
+
+body {
+    color: var(--text-color);
+    font-family: 'Andale Mono', monospace; /* Шрифт для всего тела страницы */
+    line-height: 1.6;
+    background-color: var(--background-color);
+    a:active {
+        color: var(--details-color); /* Цвет для активной ссылки */
+        font-weight: bold; /* Жирный шрифт для активной ссылки */
+    }
+    a:hover {
+        color: var(--details-color);
+        font-weight: 700; /* Делаем текст жирным */
+        transform: scale(1.2); /* Добавляем лёгкое увеличение */
+    }
+}
+
+header {
+    background-color: #f4f4f4;
+    background-image: var(--background-image);
+    color: #ffffff;
+    position: fixed; /* Фиксируем позицию */
+    top: 0; /* Закрепляем вверху */
+    width: 100%; /* На всю ширину экрана */
+    z-index: 1000; /* Чтобы меню отображалось поверх всего контента */
+}
+
+#second-semester-btn {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    background-color: var(--details-color);
+    border: 2px solid var(--text-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+#second-semester-btn:hover {
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+    transform: scale(1.05);
+}
+#second-semester-btn:active {
+    background-color: var(--secondary-color);
+    color: var(--secondary-color);
+    transform: scale(0.95);
+}
+
+#show-lectures-btn {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    background-color: var(--details-color);
+    border: 2px solid var(--text-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+#show-lectures-btn:hover {
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+    transform: scale(1.05);
+}
+#show-lectures-btn:active {
+    background-color: var(--secondary-color);
+    color: var(--secondary-color);
+    transform: scale(0.95);
+}
+
+
+#submission-message {
+    font-size: 16px;
+    color: green;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, color 1s ease-in-out;
+}
+
+#submission-message.fade-in {
+    opacity: 1;
+    color: darkgreen;
+}
+
+
+
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Выровняет содержимое по центру */
+}
+
+.logo img {
+    width: 70px;
+    height: 50px;
+}
+
+.logo p {
+    margin-top: 10px;
+    text-align: center; /* Выровняет текст по центру под изображением */
+}
+.user-info p {
+    text-align: right;
+    margin: 0;
+}
+
+.nav-links {
+    background-color: var(--secondary-color);
+    
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    display: flex;
+    padding: 200px 20px 20px; 
+}
+
+aside {
+    width: 20%;
+}
+
+.side-menu {
+    list-style-type: none;
+}
+
+.side-menu li {
+    margin: 10px 0;
+}
+
+.side-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.content {
+    width: 80%;
+    padding: 0 20px;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.intro p {
+    margin: 0;
+    flex: 1;
+}
+
+.myphoto {
+    width: 150px;
+    height: auto;
+    border-radius: 50%; /* Закругленные края */
+    max-width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Тень */
+
+}
+
+.myphoto:hover {
+
+    transform: rotate(360deg); /* Вращение на 360 градусов */
+}
+
+#lectures-table {
+    display: none; /* Скрываем таблицу */
+    height: 0; /* Убираем высоту */
+    opacity: 0; /* Прозрачность */
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+#lectures-table.show {
+    display: table; /* Показываем таблицу */
+    height: auto; /* Автоматическая высота */
+    opacity: 1; /* Полностью видимая */
+}
+.success-message {
+    color: green; /* Начальный цвет */
+    animation: colorChange 2s ease-in-out; /* Анимация на 2 секунды */
+}
+
+@keyframes colorChange {
+    0% {
+        color: green;
+    }
+    50% {
+        color: orange;
+    }
+    100% {
+        color: blue;
+    }
+}
+
+
+
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    position: relative bottom;
+    background-image: var(--background-image);
+    color: #ffffff;
+}
+
+.social-icon {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.program-box object {
+    width: 100%;
+    height: 750px;
+}
+
+.JPG {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0; 
+}
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid var(--details-color);
+}
+
+
+
+/* Добавленный Grid-контейнер */
+.grid-container {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 16px;
+    justify-items: center;
+    background-color: var(--background-color);
+    border-radius: 8px;
+}
+
+.jpg-item {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    transition: transform 0.3s;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.jpg-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.jpg-item figcaption {
+    margin-top: 8px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.jpg-item button {
+    margin-top: 12px;
+    padding: 8px 12px;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.jpg-item:hover {
+    transform: scale(1.05);
+}
+
+.jpg-item button:hover {
+    background-color: var(--details-color);
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 20, 35, 0.7); /* Полупрозрачный черный фон */
+    z-index: 1000;
+}
+
+.modal-content {
+    animation: fadeIn 0.5s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    max-height: 80%;
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--details-color);
+    border-radius: 5px;
+}
+
+.modal-content button[type="submit"] {
+    margin-top: 12px;
+    padding: 8px 12px;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+#scrollToTop {
+    position: fixed;
+    bottom: 20px; /* Располагаем внизу страницы */
+    right: 20px;
+    padding: 10px 15px;
+    background-color:  var(--details-color);;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    display: none; /* Скрыта по умолчанию */
+}
+
+#scrollToTop:hover {
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 480px) {
+    .jpg-item {
+        padding: 12px;
+    }
+
+    .jpg-item figcaption,
+    .jpg-item button {
+        font-size: 14px;
+    }
+
+    .jpg-item button {
+        padding: 6px 10px;
+    }
+    .footer{
+        width: 100%;
+    }
+    .jpg-item {
+        width: 100%;
+        max-width: 300px;
+    }
+    .header-top {
+        flex-direction: column; /* Перестраивает элементы в столбик на маленьких экранах */
+        text-align: center;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    aside,
+    .content {
+        width: 100%;
+    }
+
+    .right-image {
+        float: none;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .social-icon {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .program-box object {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .user-info p {
+        text-align: center;
+        margin: 0;
+    }
+    .footer{
+        width: 100%;
+    }
+    .jpg-item {
+        width: 100%;
+        max-width: 300px;
+    }
+    .header-top {
+        flex-direction: column; /* Перестраивает элементы в столбик на маленьких экранах */
+        text-align: center;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    aside,
+    .content {
+        width: 100%;
+    }
+
+    .right-image {
+        float: none;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .social-icon {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .program-box object {
+        height: 200px;
+    }
+} 
+
+
+
+@media (max-width: 768px) {
+    /* Для экранов с шириной до 768px (например, планшеты) */
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
+
+    @media (max-width: 480px) {
+        /* Для экранов с шириной до 480px (например, мобильные телефоны) */
+        table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+
+        /* Стили для улучшения внешнего вида при скролле */
+        .firsttable, .secondtable {
+            margin-top: 20px;
+        }
+    }

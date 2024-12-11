@@ -1,0 +1,175 @@
+:root {
+    --primary-color: #3498db; /* Основной цвет */
+    --secondary-color: #9fafa5; /* Вторичный цвет */
+    --text-color: #223349; /* Цвет текста */
+    --background-color: #becbb2; /* Цвет фона */
+    --details-color: #50404b; /* Цвет фона навигации */
+    --background-image: url("fon.jpg"); /* Добавьте путь к вашему изображению */
+}
+.nav-links a:hover  {
+    color: var(--details-color);
+    font-weight: 700; /* Делаем текст жирным */
+    transform: scale(1.2); /* Добавляем лёгкое увеличение */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Andale Mono', monospace;
+}
+.product-card {
+    min-height: 400px; /* Установите нужную высоту для всех карточек */
+}
+
+/* Устанавливаем фиксированный размер изображения */
+.product-img {
+    width: 100%;
+    height: 350px; /* Установите нужную высоту для изображений */
+    object-fit: cover; /* Сохраняет пропорции изображения, обрезая края */
+}
+
+.carousel-item  {
+    width: 100%;
+    max-height: 400px; /* Установите нужную высоту */
+    object-fit: cover; /* Сохраняет пропорции, обрезая края */
+}   
+
+body {
+    color: var(--text-color);
+    font-family: 'Andale Mono', monospace; /* Шрифт для всего тела страницы */
+    line-height: 1.6;
+    background-color: var(--background-color);
+    a:active {
+        color: var(--details-color); /* Цвет для активной ссылки */
+        font-weight: bold; /* Жирный шрифт для активной ссылки */
+    }
+    a:hover {
+        color: var(--details-color);
+        font-weight: 700; /* Делаем текст жирным */
+        transform: scale(1.2); /* Добавляем лёгкое увеличение */
+    }
+}
+
+header {
+    background-color: #f4f4f4;
+    background-image: var(--background-image);
+    color: #ffffff;
+    position: fixed; /* Фиксируем позицию */
+    top: 0; /* Закрепляем вверху */
+    width: 100%; /* На всю ширину экрана */
+    z-index: 1000; /* Чтобы меню отображалось поверх всего контента */
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Выровняет содержимое по центру */
+}
+
+.logo img {
+    width: 70px;
+    height: 50px;
+}
+
+.logo p {
+    margin-top: 10px;
+    text-align: center; /* Выровняет текст по центру под изображением */
+}
+.user-info p {
+    text-align: right;
+    margin: 0;
+}
+
+.nav-links {
+    background-color: var(--secondary-color);
+    
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    padding: 200px 20px 20px; 
+}
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    position: relative bottom;
+    background-image: var(--background-image);
+    color: #ffffff;
+}
+
+.social-icon {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    width: 30px;
+    height: 30px;
+}
+.btn-primary {
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--secondary-color), 10%);
+}
+
+#scrollToTop {
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+}
+.card-title, .card-text {
+    color: var(--text-color);
+}
+.card-body{
+    background-color: var(--secondary-color);
+}
+
+.orderForm{
+    background-color: var(--secondary-color);
+}
+header, .navbar {
+    background-color: rgba(255, 255, 255, 0); /* Прозрачный белый */
+}
+
+.navbar-nav .nav-link, header p {
+    color: white; /* Ваш цвет текста */
+}
+.navbar-toggler {
+    background-color: #3498db; /* Синий фон для кнопки */
+    border: none; /* Без границ */
+}
+
+.navbar-toggler-icon {
+    background-color: #ffffff; /* Белая иконка меню */
+}
